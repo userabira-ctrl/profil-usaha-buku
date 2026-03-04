@@ -175,21 +175,41 @@ body {
 /* ===== NAVBAR ===== */
 nav {
     background-color: #5f90a1;
-    padding: 15px 0;
+    padding: 18px 0;
     text-align: center;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+    margin: 0 25px;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    position: relative;
     transition: 0.3s;
 }
 
+/* efek hover halus */
 nav a:hover {
     color: #172a3b;
+}
+
+/* garis bawah animasi */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 /* ===== JUDUL ===== */
@@ -266,22 +286,3 @@ footer {
     margin-top: 40px;
 }
 
-.navbar {
-    background-color: #6f8f9e; /* biru seperti gambar */
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 20px;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-.navbar a:hover {
-    color: #172a3b;
-}
